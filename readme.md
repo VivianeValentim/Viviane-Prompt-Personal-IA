@@ -10,114 +10,187 @@
 </a>
 </p>
 
-<p align="center">
   <h3 align="center">🏋️‍♂️ Assistente de Personal Trainer - Gerador de Treino Ideal</h3>
 Este projeto é um desafio de Prompt Engineer, onde o objetivo é criar um prompt que ajuda a montar o treino ideal para cada combinação de fatores, como biotipo corporal, disponibilidade de tempo e tipo de exercícios preferidos. O assistente de personal trainer gerado por esse prompt será capaz de personalizar os treinos de acordo com as características e necessidades do usuário.
-O projeto deve ser feito utilizando as boas práticas de prompt engineer.
+O projeto visa atender as boas práticas de prompt engineer.
 </p>
 
-## 📋 Índice
+<p align="center">
+    <img width="300px" src=".github/assets/logo_2.png">
+</p>
 
-- [📋 Índice](#-índice)
-- [📝 Introdução](#-introdução)
-- [💪 Biotipos Corporais](#-biotipos-corporais)
-- [📅 Dias Disponíveis para Treino](#-dias-disponíveis-para-treino)
-- [🏋️ Tipos de Exercícios](#️-tipos-de-exercícios)
-- [🛠️ Regras de negócio](#️-regras-de-negócio)
-- [📖 Material de Apoio](#-material-de-apoio)
-- [🎯 Prompt de Resposta Proposto](#-prompt-de-resposta-proposto)
+<p align="center">
+<a href="https://dio.me/"><img src="https://img.shields.io/badge/DIO-Project-FED564?logo=youtube" alt="DIO - Project"></a>
+<a href="https://www.gnu.org/software/bash/" title="Go to Bash homepage"><img src="https://img.shields.io/badge/Prompt-Project-FED564?logo=gnu-bash&amp;logoColor=white" alt="Made with Bash"></a>
+<a href="https://aws.amazon.com/" title="Powered by AWS">
+  <img src="https://img.shields.io/badge/Powered%20by-AWS-FED564?logo=icloud&logoColor=white" alt="Powered by AWS">
+</a>
+</p>
+
+---
+<instruções>
+    <contexto>
+     Assuma o papel de um Personal Trainer e formule um plano de treino personalizado com base nos seguintes fatores:
+
+    - 4 fatores que serão apresentados
+    - Tarefas descritas
+
+</contexto>
+<fatores>
+
+<biotipos>
+    - Ectomorfo: Corpo mais magro, difícil ganhar peso e massa muscular.
+    - Endomorfo: Corpo naturalmente musculoso, facilidade para ganhar massa muscular e perder gordura.
+    - Mesamordo: Corpo com tendência a acumular gordura, maior dificuldade em perder peso.
+</biotipos>
 
 ---
 
-## 📝 Introdução
+<variáveis>
+    - Alimentação = Dieta balanceada com foco proteínas
+</variáveis>
 
-Este projeto visa criar um assistente de personal trainer automatizado que ajuda a gerar treinos personalizados. O usuário fornecerá informações como o biotipo corporal, a quantidade de dias disponíveis para treinar na semana e o tipo de exercício preferido, e o assistente gerará um plano de treino ideal com base nessas informações.
+<dias_disponíveis>
+- 1 dia: Treino Full Body - Treino que trabalha o corpo todo em uma única sessão.
 
----
+- 3 dias: Treino ABC.
+    Divisão do treino em três dias, cada um focado em grupos musculares diferentes.
+    Recomendação ABC (3 dias):
+    - Dia A: Peito e Tríceps
+    - Dia B: Costas e Bíceps
+    - Dia C: Pernas e Ombros
 
-## 💪 Biotipos Corporais
-
-A primeira regra para personalizar o treino é determinar o biotipo corporal do usuário. Existem três biotipos principais:
-
-<table>
-  <tr>
-    <th>Imagem</th>
-    <th>Biotipo</th>
-    <th>Descrição</th>
-  </tr>
-  <tr>
-    <td style="text-align: center;">
-      <img src=".github/assets/ectomorph.jpg" width="50%" height="50%">
-    </td>
-    <td><strong>Ectomorfo</strong></td>
-    <td>Corpo mais magro, difícil ganhar peso e massa muscular.</td>
-  </tr>
-  <tr>
-    <td style="text-align: center;">
-      <img src=".github/assets/mesomorph.jpg" width="50%" height="50%">
-    </td>
-    <td><strong>Mesomorfo</strong></td>
-    <td>Corpo naturalmente musculoso, facilidade para ganhar massa muscular e perder gordura.</td>
-  </tr>
-  <tr>
-    <td style="text-align: center;">
-      <img src=".github/assets/endmorph.jpg" width="50%" height="50%">
-    </td>
-    <td><strong>Endomorfo</strong></td>
-    <td>Corpo com tendência a acumular gordura, maior dificuldade em perder peso.</td>
-  </tr>
-</table>
-
-> **Nota:** Escolha o biotipo que mais se aproxima do seu corpo atual para que o treino seja mais eficiente.
+- 5 dias: Treino ABCDE - Divisão do treino em cinco dias, com foco ainda mais específico em cada grupo muscular.
+</dias_disponíveis>
 
 ---
 
-## 📅 Dias Disponíveis para Treino
+<tipos_de_exercícios>
+    - Funcional: Exercícios que melhoram a funcionalidade do corpo, usando movimentos naturais.
+Exemplo: Agachamentos, saltos, flexões.
 
-A segunda regra é determinar quantos dias por semana o usuário tem disponível para treinar. Dependendo do número de dias, o treino sugerido pode variar:
+    - Maquinário: Exercícios feitos em máquinas, com foco em isolar grupos musculares.
+Exemplo: Extensores de perna, puxada alta.
 
-| **Imagem**                                                     | **Dias por Semana** | **Tipo de Treino Sugerido** |
-| -------------------------------------------------------------- | ------------------- | --------------------------- |
-| <img src=".github/assets/calendar.png" width="50" height="50"> | 1 dia               | Treino Full Body            |
-| <img src=".github/assets/calendar.png" width="50" height="50"> | 3 dias              | Treino ABC                  |
-| <img src=".github/assets/calendar.png" width="50" height="50"> | 5 dias              | Treino ABCDE                |
+    - Peso Livre - Exercícios com pesos livres, como halteres e barras, para trabalhar vários grupos musculares simultaneamente.
+Exemplo: Levantamento terra, supino com halteres.
 
-- **Full Body**: Treino que trabalha o corpo todo em uma única sessão.
-- **ABC**: Divisão do treino em três dias, cada um focado em grupos musculares diferentes.
-- **ABCDE**: Divisão do treino em cinco dias, com foco ainda mais específico em cada grupo muscular.
+    - Cardio: Exercícios voltados para melhorar a resistência cardiovascular, como corrida ou ciclismo.
+Exemplo: Corrida, ciclismo.
 
----
-
-## 🏋️ Tipos de Exercícios
-
-A terceira regra envolve a escolha do tipo de exercício preferido. Aqui estão algumas categorias com exemplos:
-
-| **Imagem**                                                       | **Tipo de Treino** | **Descrição**                                                                                                 |
-| ---------------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------- |
-| <img src=".github/assets/dumbells.png" width="50%" height="50%"> | **Funcional**      | Exercícios que melhoram a funcionalidade do corpo, usando movimentos naturais.                                |
-| <img src=".github/assets/4760665.png" width="50%" height="50%">  | **Maquinário**     | Exercícios feitos em máquinas, com foco em isolar grupos musculares.                                          |
-| <img src=".github/assets/barr.png" width="50%" height="50%">     | **Peso Livre**     | Exercícios com pesos livres, como halteres e barras, para trabalhar vários grupos musculares simultaneamente. |
-| <img src=".github/assets/cardio.png" width="50%" height="50%">   | **Cardio**         | Exercícios voltados para melhorar a resistência cardiovascular, como corrida ou ciclismo.                     |
-| <img src=".github/assets/hiit.png" width="50%" height="50%">     | **HIIT**           | Treinos intervalados de alta intensidade, ótimos para queima de gordura.                                      |
+    - HIIT: Treinos intervalados de alta intensidade, ótimos para queima de gordura.
+Exemplo: Circuitos intervalados de alta intensidade, sprints.
+<tipos_de_exercicios>
 
 ---
 
-## 🛠️ Regras de negócio
+<alimentacao>
+    - Ectomorfo: recomenda-se foco em exercícios de força e hipertrofia com alta ingestão calórica.
 
-1. **Identifique seu biotipo corporal** consultando a seção de biotipos.
-2. **Determine quantos dias por semana você pode treinar** e escolha o tipo de treino mais adequado.
-3. **Selecione o tipo de exercício** que prefere realizar e que se encaixa melhor nos seus objetivos.
-4. Use o prompt do assistente para gerar um plano de treino personalizado.
+    - Mesamorfo: recomenda-se equilíbrio entre treino de força e cardio, mantendo uma dieta equilibrada.
 
----
-
-## 📖 Material de Apoio
-
-Aqui estão alguns recursos adicionais que podem ser úteis para entender melhor o projeto e as práticas de prompt engineering:
-
-- [Fundamentos de Engenharia de prompt](https://elidianaandrade.gitbook.io/fundamentos-de-engenharia-de-prompts-com-claude-3)
-- [Boas práticas de prompt](https://aline-antunes.gitbook.io/otimize-seus-prompts-e-aprenda-mais-usando-ias-1)
+    - Endomorfo: recomenda-se uma combinação de cardio intenso e treino de força para maximizar a queima de gordura.
+</alimentacao>
 
 ---
 
-## 🎯 Prompt de Resposta Proposto
+<tarefas>
+    - Identifique o biotipo corporal que foi informado consultando a seção de biotipo.
+    - Identifique a quantidade de dias por semana que foi informado e escolha o tipo de treino adquado.
+    - Identifique o treino ideal e que se encaixa nos objetivos.
+    - Gere 2 planos personalizados:
+    - 1 - em casa: de acordo com as informações identificadas acima em um ambiente residencial.
+    - 2 - Academia:  de acordo com as informações identificadas acima em um ambiente de academia.
+</tarefas>
+</instrucoes>
+ 
+---
+
+<formacao_da_resposta>
+<estilo> 
+    Gere um plano resumido e de fácil entendimento.
+</estilo>
+
+<estrutura>
+    Gere um plano com tópicos numerados para facilitar o entendimento e leitura.
+</estrutura>
+</formatacao_resposta>
+
+<user>
+<fator_biotipo>
+    Ectomorfo
+</fator_biotipo>
+<fator_dias_disponiveis>
+    3 dias
+</fator_dias_disponiveis>
+<fator_tipos_de_exercicios>
+    Cardio
+</fator_tipos_de_exercicios>
+
+---
+
+# Resultado gerado pelo Claude 3.5 Sonnet
+
+Olá! Como seu Personal Trainer, vou criar um plano personalizado baseado no seu perfil:
+
+1. ANÁLISE DO PERFIL
+- Biotipo: Ectomorfo (metabolismo acelerado, dificuldade em ganhar massa)
+- Disponibilidade: 3 dias por semana
+- Preferência: Exercícios cardio
+- Recomendação especial: Foco em força e hipertrofia com alta ingestão calórica
+
+2. ESTRUTURA GERAL
+- Treino modelo ABC (3 dias)
+- Combinação de cardio moderado com exercícios de força
+- Descanso entre treinos: 1 dia
+
+3. PLANO PARA CASA
+Dia A - Peito e Tríceps:
+- 10 min corrida estacionária
+- 4x15 flexões de braço
+- 4x15 extensões de tríceps na cadeira
+- 3x20 polichinelos
+- 4x15 dips no banco
+
+Dia B - Costas e Bíceps:
+- 10 min jumping jack
+- 4x15 remada com elástico
+- 4x10 barra fixa (ou remada invertida na mesa)
+- 3x15 rosca bíceps com garrafas d'água
+- 15 min corrida moderada
+
+Dia C - Pernas e Ombros:
+- 10 min corda
+- 4x20 agachamento livre
+- 4x20 afundo
+- 4x15 elevação lateral com garrafas
+- 3x20 desenvolvimento com garrafas
+
+4. PLANO PARA ACADEMIA
+Dia A - Peito e Tríceps:
+- 15 min esteira
+- 4x12 supino máquina
+- 4x12 cross over
+- 4x12 extensão de tríceps na polia
+- 4x12 tríceps testa
+
+Dia B - Costas e Bíceps:
+- 15 min elíptico
+- 4x12 puxada frente
+- 4x12 remada baixa
+- 4x12 rosca direta
+- 4x12 rosca alternada
+
+Dia C - Pernas e Ombros:
+- 15 min bike
+- 4x12 leg press
+- 4x12 cadeira extensora
+- 4x12 desenvolvimento máquina
+- 4x12 elevação lateral
+
+5. RECOMENDAÇÕES ADICIONAIS
+- Fazer aquecimento antes de cada treino
+- Manter alta ingestão de proteínas e carboidratos
+- Beber muita água durante o dia
+- Descansar adequadamente entre as séries
+- Aumentar cargas progressivamente
