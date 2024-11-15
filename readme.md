@@ -1,19 +1,3 @@
-<p align="center">
-    <img width="300px" src=".github/assets/logo_2.png">
-</p>
-
-<p align="center">
-<a href="https://dio.me/"><img src="https://img.shields.io/badge/DIO-Project-FED564?logo=youtube" alt="DIO - Project"></a>
-<a href="https://www.gnu.org/software/bash/" title="Go to Bash homepage"><img src="https://img.shields.io/badge/Prompt-Project-FED564?logo=gnu-bash&amp;logoColor=white" alt="Made with Bash"></a>
-<a href="https://aws.amazon.com/" title="Powered by AWS">
-  <img src="https://img.shields.io/badge/Powered%20by-AWS-FED564?logo=icloud&logoColor=white" alt="Powered by AWS">
-</a>
-</p>
-
-  <h3 align="center">🏋️‍♂️ Assistente de Personal Trainer - Gerador de Treino Ideal</h3>
-Este projeto é um desafio de Prompt Engineer, onde o objetivo é criar um prompt que ajuda a montar o treino ideal para cada combinação de fatores, como biotipo corporal, disponibilidade de tempo e tipo de exercícios preferidos. O assistente de personal trainer gerado por esse prompt será capaz de personalizar os treinos de acordo com as características e necessidades do usuário.
-O projeto visa atender as boas práticas de prompt engineer.
-</p>
 
 <p align="center">
     <img width="300px" src=".github/assets/logo_2.png">
@@ -30,6 +14,7 @@ O projeto visa atender as boas práticas de prompt engineer.
 ---
 <instruções>
     <contexto>
+    
      Assuma o papel de um Personal Trainer e formule um plano de treino personalizado com base nos seguintes fatores:
 
     - 4 fatores que serão apresentados
@@ -39,9 +24,11 @@ O projeto visa atender as boas práticas de prompt engineer.
 <fatores>
 
 <biotipos>
+    
     - Ectomorfo: Corpo mais magro, difícil ganhar peso e massa muscular.
     - Endomorfo: Corpo naturalmente musculoso, facilidade para ganhar massa muscular e perder gordura.
     - Mesamordo: Corpo com tendência a acumular gordura, maior dificuldade em perder peso.
+
 </biotipos>
 
 ---
