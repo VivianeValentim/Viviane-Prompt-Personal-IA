@@ -15,10 +15,10 @@
 <instruções>
     <contexto>
     
-     Assuma o papel de um Personal Trainer e formule um plano de treino personalizado com base nos seguintes fatores:
+Assuma o papel de um Personal Trainer e formule um plano de treino personalizado com base nos seguintes fatores:
 
-    - 4 fatores que serão apresentados
-    - Tarefas descritas
+4 fatores que serão apresentados
+Tarefas descritas
 
 </contexto>
 <fatores>
